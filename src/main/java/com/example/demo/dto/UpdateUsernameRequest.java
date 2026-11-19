@@ -1,0 +1,14 @@
+package com.example.demo.dto;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+import lombok.Data;
+
+@Data
+public class UpdateUsernameRequest {
+
+    @NotBlank(message = "用户名不能为空")
+    @Size(min = 3, max = 64, message = "用户名长度需在 3-64 之间")
+    private String username;
+
+}
